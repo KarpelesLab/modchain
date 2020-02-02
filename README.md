@@ -15,6 +15,7 @@ customized.
 Each part has a specific module prefix. More prefixes will be added as
 development progresses.
 
-* d → [`base.Discovery`](https://godoc.org/github.com/KarpelesLab/modchain/base#Discovery) discovery of p2p nodes
-* n → network
-* t → transactions
+| letter | object | description |
+|:-------|:-------|:------------|
+| d | [`base.Discovery`](https://godoc.org/github.com/KarpelesLab/modchain/base#Discovery) | discovery of p2p nodes |
+| n | `base.Network` | networking between nodes |
