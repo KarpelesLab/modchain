@@ -18,11 +18,3 @@ type DiscoveryAnnouncable interface {
 	// discovery protocol so other nodes can find it.
 	AnnounceSelf(*net.TCPAddr) error
 }
-
-// DiscoveryFixed type can be used when using fixed seed nodes, such as what
-// Bitcoin and other cryptocurrencies do.
-type DiscoveryFixed []*net.TCPAddr
-
-func (d DiscoveryFixed) GetPeers() ([]*net.TCPAddr, error) {
-	return d, nil
-}
