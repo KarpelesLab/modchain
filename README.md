@@ -26,7 +26,7 @@ development progresses.
 | letter | object | description |
 |:-------|:-------|:------------|
 | d | [`base.Discovery`](https://godoc.org/github.com/KarpelesLab/modchain/base#Discovery) | discovery of p2p nodes |
-| n | `base.Network` | networking between nodes |
+| n | [`base.Network`](https://godoc.org/github.com/KarpelesLab/modchain/base#Network) | networking between nodes |
 | r | | RPC |
 | w | | Wallet |
 
