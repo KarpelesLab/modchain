@@ -8,4 +8,6 @@ type Network interface {
 type NetOptions struct {
 	// Discovery is used for peer-to-peer networks to find other peers
 	Discovery Discovery
+
+	RPC RPC
 }
