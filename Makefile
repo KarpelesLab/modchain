@@ -6,14 +6,20 @@ GOPATH:=$(shell $(GO) env GOPATH)
 # disable cgo
 export CGO_ENABLED=0
 
-.PHONY: test deps
+.PHONY: test deps clean
 
 all:
 	$(GOPATH)/bin/goimports -w -l .
 	$(GO) build -v ./...
+
+bitcoind:
+	$(GO) build -v ./cmd/bitcoind
 
 deps:
 	$(GO) get -v -t ./...
 
 test:
 	$(GO) test -v ./...
+
+clean:
+	$(RM) bitcoind
