@@ -7,4 +7,6 @@ const (
 	BitcoinTestnetMagic  uint32 = 0xDAB5BFFA
 	BitcoinTestnet3Magic uint32 = 0x0709110B
 	NamecoinMagic        uint32 = 0xFEB4BEF9
+
+	BitcoinVersion int32 = 190001 // 0.19.0.1 TODO check
 )

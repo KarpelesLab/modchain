@@ -12,12 +12,13 @@ type bitcoinNet struct {
 	version   int32
 	userAgent string
 
-	l *net.TCPListener
+	l   *net.TCPListener
+	opt *base.NetOptions
 }
 
 // New will return a new network instance for peer-to-peer communications
 // complying with Bitcoin protocol.
-func New(network, addr string, magic uint32, version int32) (base.Network, error) {
+func New(network, addr string, magic uint32, version int32, opt *base.NetOptions) (base.Network, error) {
 	a, err := net.ResolveTCPAddr(network, addr)
 	if err != nil {
 		return nil, fmt.Errorf("failed to resolve p2p listen address: %w", err)
@@ -33,6 +34,7 @@ func New(network, addr string, magic uint32, version int32) (base.Network, error
 		version:   version,
 		userAgent: "",
 		l:         l,
+		opt:       opt,
 	}
 
 	return res, nil
